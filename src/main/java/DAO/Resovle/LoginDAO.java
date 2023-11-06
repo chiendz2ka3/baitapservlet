@@ -2,15 +2,15 @@ package DAO.Resovle;
 
 import DAO.Interface.UserLogin;
 import DAO.Interface.registersUser;
-import Entities.UsersEntity;
+import Model.UsersEntity;
 import jakarta.persistence.*;
 
-public class loginipl implements registersUser {
+public class LoginDAO implements registersUser {
 
     private EntityManagerFactory entityManagerFactory;
     EntityTransaction tran;
 
-    public loginipl() {
+    public LoginDAO() {
         entityManagerFactory = Persistence.createEntityManagerFactory("manager");
     }
 

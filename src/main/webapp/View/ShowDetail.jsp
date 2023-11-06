@@ -18,6 +18,7 @@
 </head>
 <body>
 <div class="container">
+    <h1>Nhà cung cấp :${nhacc.getTenNhaCungCap()}</h1>
     <table class="table table-hover text-center">
         <thead class="table">
         <tr>
@@ -41,8 +42,8 @@
     </table>
    <c:if test="${giaban!=0}">
        <form action="GetDetailHoaDon-servlet" method="post">
-           <h1>tổng tiền: ${Giaban}</h1>
-           <button type="submit" class="btn btn-success">thanh toan</button>
+           <h4>Tổng tiền cần thanh toán: ${Giaban}</h4>
+           <button type="submit" class="btn btn-success">Thanh Toán</button>
        </form>
    </c:if>
 </div>

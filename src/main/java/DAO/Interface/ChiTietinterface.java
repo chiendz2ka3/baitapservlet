@@ -1,7 +1,6 @@
 package DAO.Interface;
 
-import Entities.ChitietThanhToanVaoEntity;
-import Entities.ChitietdonhangEntity;
+import Model.ChitietThanhToanVaoEntity;
 
 import java.util.List;
 

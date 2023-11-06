@@ -20,7 +20,7 @@
     <form action="FindpR-servlet" method="post">
         <div class="input-group input-group-sm mb-3">
             <input type="text" name="namepr" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-            <button type="submit" class="btn btn-primary">tìm kiếm</button>
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
         </div>
     </form>
 <table class="table table-hover text-center">

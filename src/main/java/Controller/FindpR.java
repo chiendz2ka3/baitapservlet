@@ -1,6 +1,6 @@
-package Servlet;
+package Controller;
 
-import DAO.Resovle.Productipl;
+import DAO.Resovle.LinhKienDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -18,10 +18,10 @@ public class FindpR extends HttpServlet {
             resp.sendRedirect("ManagerList-servlet");
             return;
         }
-        Productipl productipl = new Productipl();
-        productipl.FindProduct(datafind);
-        req.setAttribute("listsanpham", productipl.FindProduct(datafind));
-        System.out.println(productipl.FindProduct(datafind).size());
+        LinhKienDAO linhKienDAO = new LinhKienDAO();
+        linhKienDAO.FindProduct(datafind);
+        req.setAttribute("listsanpham", linhKienDAO.FindProduct(datafind));
+        System.out.println(linhKienDAO.FindProduct(datafind).size());
         req.getRequestDispatcher("/View/dsProduct.jsp").forward(req,resp);
     }
 }

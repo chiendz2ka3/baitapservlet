@@ -1,7 +1,7 @@
-package Servlet;
+package Controller;
 
 import DAO.Interface.UserLogin;
-import DAO.Resovle.loginipl;
+import DAO.Resovle.LoginDAO;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -29,7 +29,7 @@ public class DangNhap extends HttpServlet {
                 resp.sendRedirect("DangNhap-servlet");
                 return;
             }
-            loginipl login = new loginipl();
+            LoginDAO login = new LoginDAO();
             UserLogin data = new UserLogin(username , password);
             System.out.println(data.toString());
             boolean check = login.Loginuser(data);

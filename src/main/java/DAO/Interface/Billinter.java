@@ -1,7 +1,7 @@
 package DAO.Interface;
 
-import Entities.ChitietdonhangEntity;
-import Entities.DonhangEntity;
+import Model.ChitietdonhangEntity;
+import Model.DonhangEntity;
 
 import java.util.List;
 

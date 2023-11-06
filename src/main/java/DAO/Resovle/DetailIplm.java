@@ -1,10 +1,7 @@
 package DAO.Resovle;
 
 import DAO.Interface.ChiTietinterface;
-import Entities.ChitietThanhToanVaoEntity;
-import Entities.ChitietdonhangEntity;
-import Entities.DonhangEntity;
-import Entities.NhacungcapEntity;
+import Model.ChitietThanhToanVaoEntity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
@@ -48,9 +45,12 @@ public class DetailIplm implements ChiTietinterface {
             EntityTransaction entityTransaction = entity.getTransaction();
             entityTransaction.begin();
             entity.createQuery("update ChitietThanhToanVaoEntity ct set ct.statu =1 where ct.idnhacungcap = :idnhacungcap " , ChitietThanhToanVaoEntity.class).setParameter("idnhacungcap" , idnhacungcap);
+            entity.getTransaction().commit();
             return true;
         }catch (Exception e){
             System.out.println(e.getMessage());
+        }finally {
+            entity.close();
         }
         return false;
     }

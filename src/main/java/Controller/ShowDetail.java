@@ -1,7 +1,7 @@
-package Servlet;
+package Controller;
 
-import DAO.Resovle.Productipl;
-import Entities.SanphamEntity;
+import DAO.Resovle.LinhKienDAO;
+import Model.SanphamEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -15,8 +15,8 @@ public class ShowDetail extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        super.doGet(req, resp);
           int id = Integer.parseInt(req.getParameter("sid"));
-          Productipl productipl = new Productipl();
-          SanphamEntity data = productipl.finpr(id);
+          LinhKienDAO linhKienDAO = new LinhKienDAO();
+          SanphamEntity data = linhKienDAO.finpr(id);
           req.setAttribute("data" , data);
           System.out.println(data.toString());
           req.getRequestDispatcher("View/ShowDetail.jsp").forward(req,resp);

@@ -5,15 +5,15 @@
              version="2.2">
     <persistence-unit name="manager">
 
-        <class>Entities.ChitietdonhangEntity</class>
-        <class>Entities.DonhangEntity</class>
-        <class>Entities.NhacungcapEntity</class>
-        <class>Entities.NhanvienEntity</class>
-        <class>Entities.SanphamEntity</class>
-        <class>Entities.SysdiagramsEntity</class>
-        <class>Entities.UsersEntity</class>
-        <class>Entities.ThanhToanVaoEntity</class>
-        <class>Entities.ChitietThanhToanVaoEntity</class>
+        <class>Model.ChitietdonhangEntity</class>
+        <class>Model.DonhangEntity</class>
+        <class>Model.NhacungcapEntity</class>
+        <class>Model.NhanvienEntity</class>
+        <class>Model.SanphamEntity</class>
+        <class>Model.SysdiagramsEntity</class>
+        <class>Model.UsersEntity</class>
+        <class>Model.ThanhToanVaoEntity</class>
+        <class>Model.ChitietThanhToanVaoEntity</class>
         <properties>
             <property name="toplink.jdbc.url" value="jdbc:sqlserver://localhost:1433;database=BanHang"/>
             <property name="toplink.jdbc.driver" value="com.microsoft.sqlserver.jdbc.SQLServerDriver"/>

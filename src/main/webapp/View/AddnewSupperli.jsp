@@ -17,27 +17,27 @@
 <body>
 <div class="container">
     <div class="text-center mb-4">
-        <h3>Add New Supperlie</h3>
-        <p class="text-muted">Complete the form below to add a new Supperlie</p>
+        <h3>Thêm mới nhà cung cấp phụ tùng</h3>
+<%--        <p class="text-muted">Complete the form below to add a new Supperlie</p>--%>
     </div>
 
     <div class="container d-flex justify-content-center">
         <form action="Supperlicontrol-servlet" method="post" style="width:50vw; min-width:300px;">
             <div class="row mb-3">
                 <div class="col">
-                    <label class="form-label">Supplier Name:</label>
-                    <input type="text" class="form-control" name="SupplierName" placeholder="Albert">
+                    <label class="form-label">Tên nhà cung cấp:</label>
+                    <input type="text" class="form-control" name="SupplierName" placeholder="Nhập tên nhà cung cấp phụ tùng">
                 </div>
 
                 <div class="col">
-                    <label class="form-label">Address:</label>
-                    <input type="text" class="form-control" name="Address" placeholder="">
+                    <label class="form-label">Địa chỉ:</label>
+                    <input type="text" class="form-control" name="Address" placeholder="Nhập Địa chỉ Email">
                 </div>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">PhoneNumber:</label>
-                <input type="number" class="form-control" name="sdt" placeholder="">
+                <label class="form-label">Số điện thoại:</label>
+                <input type="number" class="form-control" name="sdt" placeholder="Nhập số điện thoại">
             </div>
             <div>
                 <button type="submit" class="btn btn-success" name="submit">Save</button>

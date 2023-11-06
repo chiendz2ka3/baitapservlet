@@ -1,18 +1,18 @@
 package DAO.Resovle;
 
 import DAO.Interface.Productinterface;
-import Entities.SanphamEntity;
+import Model.SanphamEntity;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Productipl implements Productinterface {
+public class LinhKienDAO implements Productinterface {
 
     private EntityManagerFactory entityManagerFactory;
     EntityTransaction tran;
 
-    public Productipl() {
+    public LinhKienDAO() {
         entityManagerFactory = Persistence.createEntityManagerFactory("manager");
     }
     @Override

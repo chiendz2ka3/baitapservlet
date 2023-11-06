@@ -1,7 +1,7 @@
-package Servlet;
+package Controller;
 
-import DAO.Resovle.Productipl;
-import Entities.SanphamEntity;
+import DAO.Resovle.LinhKienDAO;
+import Model.SanphamEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -16,8 +16,8 @@ public class ManagerList extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        super.doGet(req, resp);
-        Productipl productipl = new Productipl();
-        List<SanphamEntity> listsanpham = productipl.ListProduct();
+        LinhKienDAO linhKienDAO = new LinhKienDAO();
+        List<SanphamEntity> listsanpham = linhKienDAO.ListProduct();
         System.out.println("count: "+ listsanpham.size());
         req.setAttribute("listsanpham", listsanpham);
         req.getRequestDispatcher("/View/dsProduct.jsp").forward(req,resp);

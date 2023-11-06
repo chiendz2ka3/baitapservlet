@@ -1,6 +1,6 @@
 package DAO.Interface;
 
-import Entities.SanphamEntity;
+import Model.SanphamEntity;
 
 import java.util.ArrayList;
 

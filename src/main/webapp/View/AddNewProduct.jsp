@@ -19,27 +19,27 @@
 
 <div class="container">
     <div class="text-center mb-4">
-        <h3>Add New User</h3>
-        <p class="text-muted">Complete the form below to add a new Product</p>
+        <h3>Thêm mới phụ tùng</h3>
+<%--        <p class="text-muted">Complete the form below to add a new Product</p>--%>
     </div>
 
     <div class="container d-flex justify-content-center">
         <form action="AddnewProduct-servlet" method="post" style="width:50vw; min-width:300px;">
             <div class="row mb-3">
                 <div class="col">
-                    <label class="form-label">Product Name:</label>
-                    <input type="text" class="form-control" name="ProductName" placeholder="Albert">
+                    <label class="form-label">Tên:</label>
+                    <input type="text" class="form-control" name="ProductName" placeholder="Nhập tên phụ tùng">
                 </div>
 
                 <div class="col">
-                    <label class="form-label">Price:</label>
-                    <input type="number" class="form-control" name="Price" placeholder="Einstein">
+                    <label class="form-label">Giá bán:</label>
+                    <input type="number" class="form-control" name="Price" placeholder="Nhập giá">
                 </div>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Quanlity:</label>
-                <input type="number" class="form-control" name="soluong" placeholder="name@example.com">
+                <label class="form-label">Số lượng:</label>
+                <input type="number" class="form-control" name="soluong" placeholder="Nhập số lượng">
             </div>
 
             <div class="form-group mb-3">

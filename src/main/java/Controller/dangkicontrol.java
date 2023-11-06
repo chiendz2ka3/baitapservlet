@@ -1,7 +1,7 @@
-package Servlet;
+package Controller;
 
-import DAO.Resovle.loginipl;
-import Entities.UsersEntity;
+import DAO.Resovle.LoginDAO;
+import Model.UsersEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -38,7 +38,7 @@ public class dangkicontrol extends HttpServlet {
                 return;
             }
 
-            loginipl login = new loginipl();
+            LoginDAO login = new LoginDAO();
             UsersEntity data = new UsersEntity(username , password , sdt , Email);
 
             boolean check = login.RegisterUser(data);

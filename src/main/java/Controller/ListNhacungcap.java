@@ -1,7 +1,7 @@
-package Servlet;
+package Controller;
 
 import DAO.Resovle.Supplieimp;
-import Entities.NhacungcapEntity;
+import Model.NhacungcapEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

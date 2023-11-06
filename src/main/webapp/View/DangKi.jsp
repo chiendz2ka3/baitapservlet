@@ -35,14 +35,14 @@
 
                     <form style="width: 23rem;" action='dangkicontrol-servlet' method='POST'>
 
-                        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Registers</h3>
+                        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Dăng kí</h3>
                         <div class="form-outline mb-4">
                             <input type="text" id="form2Example17" name="UserName" class="form-control form-control-lg" />
-                            <label class="form-label" for="form2Example18">UserName</label>
+                            <label class="form-label" for="form2Example18">Tên đăng nhập</label>
                         </div>
                         <div class="form-outline mb-4">
                             <input type="email" id="form2Example18" name="Email" class="form-control form-control-lg" />
-                            <label class="form-label" for="form2Example18">Email address</label>
+                            <label class="form-label" for="form2Example18">Email</label>
                         </div>
 
                         <div class="form-outline mb-4">
@@ -52,20 +52,20 @@
 
                         <div class="form-outline mb-4">
                             <input type="password" name="password" id="form2Example28" class="form-control form-control-lg" />
-                            <label class="form-label" for="form2Example28">Password</label>
+                            <label class="form-label" for="form2Example28">Mật khẩu</label>
                         </div>
 
                         <div class="form-outline mb-4">
                             <input type="password" name="repassword" class="form-control form-control-lg" />
-                            <label class="form-label" for="form2Example28">repassword</label>
+                            <label class="form-label" for="form2Example28">Xác nhận mật khẩu</label>
                         </div>
 
                         <div class="pt-1 mb-4">
                             <button class="btn btn-info btn-lg btn-block" type="submit">Đăng kí</button>
                         </div>
 
-                        <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
-                        <p>? <a href="DangNhap-servlet" class="link-info">Register here</a></p>
+<%--                        <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>--%>
+                        <p>? <a href="DangNhap-servlet" class="link-info">DĂNG NHẬP Ở ĐÂY</a></p>
 
                     </form>
 

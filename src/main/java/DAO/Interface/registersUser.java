@@ -1,6 +1,6 @@
 package DAO.Interface;
 
-import Entities.UsersEntity;
+import Model.UsersEntity;
 
 public interface registersUser {
 

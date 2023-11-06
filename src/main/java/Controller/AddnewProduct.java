@@ -1,9 +1,9 @@
-package Servlet;
+package Controller;
 
-import DAO.Resovle.Productipl;
+import DAO.Resovle.LinhKienDAO;
 import DAO.Resovle.Supplieimp;
-import Entities.NhacungcapEntity;
-import Entities.SanphamEntity;
+import Model.NhacungcapEntity;
+import Model.SanphamEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -35,8 +35,8 @@ public class AddnewProduct extends HttpServlet {
         String idSupperli = req.getParameter("supperli");
         System.out.println(" da log vao duoc trong ham");
         SanphamEntity data = new SanphamEntity(namepr , Double.parseDouble(Price) , Double.parseDouble(soluong) , "", Integer.parseInt(idSupperli));
-        Productipl productipl = new Productipl();
-        boolean check =productipl.AddNewProduct(data);
+        LinhKienDAO linhKienDAO = new LinhKienDAO();
+        boolean check = linhKienDAO.AddNewProduct(data);
         if(check) resp.sendRedirect("Menu-servlet");
         else resp.sendRedirect("AddnewProduct-servlet");
     }

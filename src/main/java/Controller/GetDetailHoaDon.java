@@ -1,7 +1,9 @@
-package Servlet;
+package Controller;
 
 import DAO.Resovle.DetailIplm;
-import Entities.ChitietThanhToanVaoEntity;
+import DAO.Resovle.Supplieimp;
+import Model.ChitietThanhToanVaoEntity;
+import Model.NhacungcapEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -31,6 +33,9 @@ public class GetDetailHoaDon extends HttpServlet {
         }
         System.out.println("count: "+ list.size());
         req.setAttribute("Giaban", dongia);
+        Supplieimp nhacungcap = new Supplieimp();
+        NhacungcapEntity user = nhacungcap.nhacc(id);
+        req.setAttribute("nhacc" , user);
         req.setAttribute("list", list);
         req.getRequestDispatcher("View/ShowDetail.jsp").forward(req, resp);
     }

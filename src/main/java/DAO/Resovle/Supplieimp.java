@@ -1,8 +1,7 @@
 package DAO.Resovle;
 
 import DAO.Interface.supplier;
-import Entities.NhacungcapEntity;
-import Entities.SanphamEntity;
+import Model.NhacungcapEntity;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
@@ -48,6 +47,22 @@ public class Supplieimp implements supplier {
             enty.getTransaction().commit();
             enty.close();
             return arrayList;
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+
+    @Override
+    public NhacungcapEntity nhacc(int id) {
+        try {
+            EntityManager enty = entityManagerFactory.createEntityManager();
+            EntityTransaction entityTransaction = enty.getTransaction();
+            entityTransaction.begin();
+            NhacungcapEntity result = enty.find(NhacungcapEntity.class , id);
+            enty.getTransaction().commit();
+            enty.close();
+            return result;
         }catch (Exception e){
             System.out.println(e.getMessage());
             return null;

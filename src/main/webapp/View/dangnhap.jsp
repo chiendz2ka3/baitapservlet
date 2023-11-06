@@ -34,19 +34,19 @@
                 <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
 
                     <form style="width: 23rem;" action='DangNhap-servlet' method='POST'>
-                        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Log in</h3>
+                        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Dăng nhập</h3>
                         <div class="form-outline mb-4">
                             <input type="text" id="form2Example18" name="UserName" class="form-control form-control-lg" />
-                            <label class="form-label" for="form2Example18">UserName</label>
+                            <label class="form-label" for="form2Example18">Tên Đăng Nhập</label>
                         </div>
                         <div class="form-outline mb-4">
                             <input type="password" id="form2Example28" name="password" class="form-control form-control-lg" />
-                            <label class="form-label" for="form2Example28" >Password</label>
+                            <label class="form-label" for="form2Example28" >Mật Khẩu</label>
                         </div>
                         <div class="pt-1 mb-4">
                             <button class="btn btn-info btn-lg btn-block" type="submit">Đăng nhập</button>
                         </div>
-                        <p>Don't have an account? <a href="dangkicontrol-servlet" class="link-info">Register here</a></p>
+                        <p>Don't have an account? <a href="dangkicontrol-servlet" class="link-info">Đăng kí ở đây</a></p>
 
                     </form>
 
