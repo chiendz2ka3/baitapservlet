@@ -19,6 +19,6 @@ public class ShowDetail extends HttpServlet {
           SanphamEntity data = linhKienDAO.finpr(id);
           req.setAttribute("data" , data);
           System.out.println(data.toString());
-          req.getRequestDispatcher("View/ShowDetail.jsp").forward(req,resp);
+          req.getRequestDispatcher("View/doChiTietDonHang.jsp").forward(req,resp);
     }
 }

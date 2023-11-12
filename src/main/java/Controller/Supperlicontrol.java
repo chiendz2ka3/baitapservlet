@@ -1,6 +1,6 @@
 package Controller;
 
-import DAO.Resovle.Supplieimp;
+import DAO.Resovle.SupplieimpDao;
 import Model.NhacungcapEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -16,7 +16,7 @@ public class Supperlicontrol extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        super.doGet(req, resp);
         System.out.println("anh chien dz");
-        req.getRequestDispatcher("View/AddnewSupperli.jsp").forward(req, resp);
+        req.getRequestDispatcher("View/GDThemMoiNhaCungCap.jsp").forward(req, resp);
     }
 
     @Override
@@ -30,9 +30,9 @@ public class Supperlicontrol extends HttpServlet {
             resp.sendRedirect("Supperlicontrol-servlet");
             return;
         }
-        Supplieimp supplieimp = new Supplieimp();
+        SupplieimpDao supplieimpDao = new SupplieimpDao();
         NhacungcapEntity data = new NhacungcapEntity(SupplierName , Address , PhoneNumber);
-        boolean check = supplieimp.Addnewsupplier(data);
+        boolean check = supplieimpDao.Addnewsupplier(data);
         if(check) resp.sendRedirect("Menu-servlet");
         else resp.sendRedirect("Supperlicontrol-servlet");
     }

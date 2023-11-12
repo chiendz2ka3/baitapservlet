@@ -1,7 +1,7 @@
 package Controller;
 
 import DAO.Resovle.LinhKienDAO;
-import DAO.Resovle.Supplieimp;
+import DAO.Resovle.SupplieimpDao;
 import Model.NhacungcapEntity;
 import Model.SanphamEntity;
 import jakarta.servlet.ServletException;
@@ -19,11 +19,11 @@ public class AddnewProduct extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        super.doGet(req, resp);
 
-        Supplieimp supplieimp = new Supplieimp();
-        List<NhacungcapEntity> listsuppler = supplieimp.Listsupplier();
+        SupplieimpDao supplieimpDao = new SupplieimpDao();
+        List<NhacungcapEntity> listsuppler = supplieimpDao.Listsupplier();
         System.out.println("count: "+ listsuppler.size());
         req.setAttribute("listsuppler" , listsuppler);
-        req.getRequestDispatcher("View/AddNewProduct.jsp").forward(req,resp);
+        req.getRequestDispatcher("View/GDThemMoiLinhKien.jsp").forward(req,resp);
     }
 
     @Override

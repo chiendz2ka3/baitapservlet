@@ -14,7 +14,7 @@ public class dangkicontrol extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        // super.doGet(req, resp);
-        req.getRequestDispatcher("View/DangKi.jsp").forward(req, resp);
+        req.getRequestDispatcher("View/GDDangKi.jsp").forward(req, resp);
     }
 
     @Override

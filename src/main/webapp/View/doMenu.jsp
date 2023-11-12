@@ -27,7 +27,7 @@
         <a href="/quanlybanhang/AddnewProduct-servlet" id="paaa" class="btn btn-primary">thêm sản phẩm</a>
         <a href="Supperlicontrol-servlet"  id="paaa" class="btn btn-primary">Thêm nhà phân phối</a>
         <a href="ListNhacungcap-servlet" id="paaa" class="btn btn-primary">Duyệt các đơn hàng</a>
-        <a id="paaa" class="btn btn-primary">Them</a>
+        <a id="paaa" class="btn btn-primary">Thêm</a>
     </div>
 </body>
 </html>

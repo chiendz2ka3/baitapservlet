@@ -35,7 +35,7 @@
 
                     <form style="width: 23rem;" action='dangkicontrol-servlet' method='POST'>
 
-                        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Dăng kí</h3>
+                        <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Đăng kí</h3>
                         <div class="form-outline mb-4">
                             <input type="text" id="form2Example17" name="UserName" class="form-control form-control-lg" />
                             <label class="form-label" for="form2Example18">Tên đăng nhập</label>

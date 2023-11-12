@@ -21,8 +21,8 @@
         <thead class="table-dark">
         <tr>
             <th>id</th>
-            <th>Tên nhà cung cấp</th>
-            <th>địa chỉ</th>
+            <th>Tên Nhà Cung Cấp</th>
+            <th>Địa Chỉ</th>
             <th>SDT</th>
             <th>Action</th>
         </tr>

@@ -16,7 +16,7 @@ public class DangNhap extends HttpServlet {
        // super.doGet(req, resp);
         System.out.println(" anh chien dep trai vcll");
         resp.setContentType("text/html");
-        req.getRequestDispatcher("View/dangnhap.jsp").forward(req, resp);
+        req.getRequestDispatcher("View/GDdangnhap.jsp").forward(req, resp);
     }
 
     @Override

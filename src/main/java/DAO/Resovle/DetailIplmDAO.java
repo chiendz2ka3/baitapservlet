@@ -10,12 +10,12 @@ import jakarta.persistence.Persistence;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DetailIplm implements ChiTietinterface {
+public class DetailIplmDAO implements ChiTietinterface {
 
     private EntityManagerFactory entityManagerFactory;
     EntityTransaction tran;
 
-    public DetailIplm() {
+    public DetailIplmDAO() {
         entityManagerFactory = Persistence.createEntityManagerFactory("manager");
     }
 

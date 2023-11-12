@@ -27,8 +27,8 @@
     <thead class="table-dark">
     <tr>
         <th scope="col">ID</th>
-        <th scope="col">tên sản phẩm</th>
-        <th scope="col">giá bán</th>
+        <th scope="col">Tên Phụ Tùng</th>
+        <th scope="col">Giá Bán</th>
         <th scope="col">Action</th>
     </tr>
     </thead>
@@ -41,7 +41,7 @@
             <td>${item.getGiahang()}</td>
             <td>
                 <a href="/quanlybanhang/ShowDetail-servlet?sid=${item.getIdsanpham()}" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
-                <button type="button" class="btn btn-primary">Them</button>
+                <button type="button" class="btn btn-primary">Thêm</button>
             </td>
         </tr>
     </c:forEach>

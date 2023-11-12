@@ -1,6 +1,6 @@
 package Controller;
 
-import DAO.Resovle.Supplieimp;
+import DAO.Resovle.SupplieimpDao;
 import Model.NhacungcapEntity;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -16,13 +16,13 @@ public class ListNhacungcap extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 //        super.doGet(req, resp);
-        Supplieimp supplieimp = new Supplieimp();
-        List<NhacungcapEntity> listsuppler = supplieimp.Listsupplier();
+        SupplieimpDao supplieimpDao = new SupplieimpDao();
+        List<NhacungcapEntity> listsuppler = supplieimpDao.Listsupplier();
         System.out.println("count: "+ listsuppler.size());
         for (NhacungcapEntity data : listsuppler) {
             System.out.println(data.toString());
         }
         req.setAttribute("listsuppler" , listsuppler);
-        req.getRequestDispatcher("View/ListNhacungcap.jsp").forward(req,resp);
+        req.getRequestDispatcher("View/dodsNhacungcap.jsp").forward(req,resp);
     }
 }

@@ -22,6 +22,6 @@ public class FindpR extends HttpServlet {
         linhKienDAO.FindProduct(datafind);
         req.setAttribute("listsanpham", linhKienDAO.FindProduct(datafind));
         System.out.println(linhKienDAO.FindProduct(datafind).size());
-        req.getRequestDispatcher("/View/dsProduct.jsp").forward(req,resp);
+        req.getRequestDispatcher("/View/dodsSanPham.jsp").forward(req,resp);
     }
 }

@@ -1,7 +1,7 @@
 package Controller;
 
-import DAO.Resovle.DetailIplm;
-import DAO.Resovle.Supplieimp;
+import DAO.Resovle.DetailIplmDAO;
+import DAO.Resovle.SupplieimpDao;
 import Model.ChitietThanhToanVaoEntity;
 import Model.NhacungcapEntity;
 import jakarta.servlet.ServletException;
@@ -23,7 +23,7 @@ public class GetDetailHoaDon extends HttpServlet {
 //        super.doGet(req, resp);
         int id = Integer.parseInt(req.getParameter("sid"));
         idloaihang = id;
-        DetailIplm detail = new DetailIplm();
+        DetailIplmDAO detail = new DetailIplmDAO();
         System.out.println("da logoooo: "+ id);
         List<ChitietThanhToanVaoEntity> list = new ArrayList<>();
         list = detail.ListDetailWithid(id);
@@ -33,18 +33,18 @@ public class GetDetailHoaDon extends HttpServlet {
         }
         System.out.println("count: "+ list.size());
         req.setAttribute("Giaban", dongia);
-        Supplieimp nhacungcap = new Supplieimp();
+        SupplieimpDao nhacungcap = new SupplieimpDao();
         NhacungcapEntity user = nhacungcap.nhacc(id);
         req.setAttribute("nhacc" , user);
         req.setAttribute("list", list);
-        req.getRequestDispatcher("View/ShowDetail.jsp").forward(req, resp);
+        req.getRequestDispatcher("View/doChiTietDonHang.jsp").forward(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
        // super.doPost(req, resp);
         if(idloaihang!=0){
-            DetailIplm detail = new DetailIplm();
+            DetailIplmDAO detail = new DetailIplmDAO();
             boolean Check = detail.ThanhToan(idloaihang);
             if (Check) resp.sendRedirect("ListNhacungcap-servlet");
             else resp.sendRedirect("GetDetailHoaDon-servlet");

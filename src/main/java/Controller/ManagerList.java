@@ -20,7 +20,7 @@ public class ManagerList extends HttpServlet {
         List<SanphamEntity> listsanpham = linhKienDAO.ListProduct();
         System.out.println("count: "+ listsanpham.size());
         req.setAttribute("listsanpham", listsanpham);
-        req.getRequestDispatcher("/View/dsProduct.jsp").forward(req,resp);
+        req.getRequestDispatcher("/View/dodsSanPham.jsp").forward(req,resp);
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

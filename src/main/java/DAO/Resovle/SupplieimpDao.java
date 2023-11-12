@@ -9,12 +9,12 @@ import jakarta.persistence.Persistence;
 
 import java.util.ArrayList;
 
-public class Supplieimp implements supplier {
+public class SupplieimpDao implements supplier {
 
     private EntityManagerFactory entityManagerFactory;
     EntityTransaction tran;
 
-    public Supplieimp() {
+    public SupplieimpDao() {
         entityManagerFactory = Persistence.createEntityManagerFactory("manager");
     }
     @Override
